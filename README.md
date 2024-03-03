@@ -5,8 +5,9 @@ An exxampole of how to build a saas project using django
 * [ ] Django Initialisation
 * [ ] Configure via django-environ
 * [ ] Configure web server
-* [ ] testing
-* [ ] CI - Continuous Integration / pre-commit
+* [ ] testing / coverage
+* [ ] CI - Continuous Integration 
+* [ ] pre-commit
 * [ ] Django modeling
 * [ ] Heroku  .. might no use this I prefer linode and aws
 
@@ -24,8 +25,11 @@ pip install -r requirements.txt
 django-admin startproject core .
 
 python manage.py runserver
+
+pre-commit run -a
+pre-commit install
 ```
-[comment]: # (this is where all the develoment tools go)
+
 
 
 
