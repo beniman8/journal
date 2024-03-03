@@ -3,6 +3,7 @@ An exxampole of how to build a saas project using django
 
 * [ ] dependencies
 * [ ] Django Initialisation
+* [ ] Configure via django-environ
 * [ ] Configure web server
 * [ ] testing
 * [ ] CI - Continuous Integration / pre-commit
