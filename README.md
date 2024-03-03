@@ -17,6 +17,10 @@ virtualenv Env
 
 Env\Scripts\activate
 pip install -r requirements-dev.txt
+pip-compile requirements.in
+pip install -r requirements.txt
+
+django-admin startproject core .
 ```
 
 
