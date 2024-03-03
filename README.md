@@ -1,13 +1,13 @@
 # journal
 An exxampole of how to build a saas project using django
 
-* [ ] dependencies
-* [ ] Django Initialisation
+* [x] dependencies
+* [x] Django Initialisation
 * [ ] Configure via django-environ
 * [ ] Configure web server
 * [ ] testing / coverage
 * [ ] CI - Continuous Integration 
-* [ ] pre-commit
+* [x] pre-commit
 * [ ] Django modeling
 * [ ] Heroku  .. might no use this I prefer linode and aws
 
