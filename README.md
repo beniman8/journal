@@ -22,6 +22,8 @@ pip-compile requirements.in
 pip install -r requirements.txt
 
 django-admin startproject core .
+
+python manage.py runserver
 ```
 
 
