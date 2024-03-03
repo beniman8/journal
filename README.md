@@ -17,7 +17,7 @@ An exxampole of how to build a saas project using django
 virtualenv Env
 
 Env\Scripts\activate
-pip install -r requirements-dev.txt [comment]: # (this is where all the develoment tools go)
+pip install -r requirements-dev.txt 
 pip-compile requirements.in
 pip install -r requirements.txt
 
@@ -25,7 +25,7 @@ django-admin startproject core .
 
 python manage.py runserver
 ```
-
+[comment]: # (this is where all the develoment tools go)
 
 
 
