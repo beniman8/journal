@@ -12,21 +12,37 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import environ
+
+env = environ.Env(
+    ACCOUNT_DEFAULT_HTTP_PROTOCOL=(str, "https"),
+    ALLOWED_HOSTS=(list, []),
+    CSRF_COOKIE_SECURE=(bool, True),
+    DATABASE_CONN_MAX_AGE=(int, 600),
+    DATABASE_SSL_REQUIRE=(bool, True),
+    DEBUG=(bool, False),
+    EMAIL_BACKEND=(str, "anymail.backends.sendgrid.EmailBackend"),
+    SECURE_HSTS_SECONDS=(int, 60 * 60 * 24 * 365),
+    SECURE_SSL_REDIRECT=(bool, True),
+    SENTRY_ENABLED=(bool, True),
+    SESSION_COOKIE_SECURE=(bool, True),
+    STRIPE_LIVE_MODE=(bool, True),
+)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+environ.Env.read_env(BASE_DIR / ".env")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-*ta_@i1=w7oae68htcwetlnbzk*idu(4+idggl7qf9f9$==-q9"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
-
+SECRET_KEY = env("SECRET_KEY")
+DEBUG = env("DEBUG")
+ALLOWED_HOSTS: list[str] = env("ALLOWED_HOSTS")
 
 # Application definition
 
