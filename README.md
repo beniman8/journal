@@ -2,9 +2,9 @@
 An exxampole of how to build a saas project using django
 
 * [x] dependencies
-* [x] Django Initialisation
+* [x] Django Initialization
 * [x] Configure via django-environ
-* [ ] Configure web server
+* [x] Configure web server
 * [ ] testing / coverage
 * [ ] CI - Continuous Integration 
 * [x] pre-commit
@@ -28,6 +28,26 @@ python manage.py runserver
 
 pre-commit run -a
 pre-commit install
+```
+
+## Extra Files explainations
+
+### Makefile
+
+makefile is use to create shortcut command to get the terminal to execute other commands.
+
+example:
+
+instead of typing python manage.py in your terminal.You can just set it the make file so that it can run it,
+when you type make  or make local  or make deploy
+
+example of the way to create shortcuts in a makefile
+```
+.PHONY: local
+
+local:
+	py manage.py runserver
+
 ```
 
 
