@@ -34,7 +34,7 @@ pre-commit install
 
 ### Makefile
 
-makefile is use to create shortcut command to get the terminal to execute other commands.
+makefile is usee to create shortcut command to get the terminal to execute other commands.
 
 example:
 
@@ -50,6 +50,36 @@ local:
 
 ```
 
+
+### accounts folder placement
+
+Because the accounts app was put in a python package/folder name journal that we created.
+We need to rename it and put it in our setting so the django project can "see" it.
+
+```core/settings.py
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "journal.accounts"
+]
+
+
+```
+
+
+```journal/accounts/apps.py
+
+from django.apps import AppConfig
+
+
+class AccountsConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "journal.accounts"
+```
 
 
 
