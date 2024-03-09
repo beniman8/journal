@@ -3,6 +3,9 @@
 local:
 	py manage.py runserver
 
+pre:
+	pre-commit run -a
+
 deploy:
 	git push heroku main
 
