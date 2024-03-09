@@ -16,7 +16,7 @@ src_paths = ["journal"]
 
 [tool.pytest.ini_options]
 addopts = "--nomigrations --disable-socket"
-DJANGO_SETTINGS_MODULE = "core.settings"
+DJANGO_SETTINGS_MODULE = "core.testing_settings"
 filterwarnings = [
     # Enable warnings as errors.
     "error",
