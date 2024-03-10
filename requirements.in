@@ -1,4 +1,4 @@
-Django
-django-allauth
-django-environ
-gunicorn
+Django==4.2.10
+django-allauth==0.61.1
+django-environ==0.11.2
+gunicorn==21.2.0
