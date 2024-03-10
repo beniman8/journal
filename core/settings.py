@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
 ]
-print(ALLOWED_HOSTS)
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
