@@ -162,3 +162,4 @@ cython_debug/
 ngrok.exe
 .ngrok.exe.old
 
+notes.txt
