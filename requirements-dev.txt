@@ -1,5 +1,0 @@
-pip-tools
-pre-commit
-pytest-django
-pytest-socket
-factory-boy
