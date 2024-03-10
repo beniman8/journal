@@ -102,7 +102,13 @@ if DEBUG:
 
 WSGI_APPLICATION = "core.wsgi.application"
 
+CORS_ALLOWED_ORIGINS = [
+    "https://264c-70-48-185-92.ngrok-free.app",
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://264c-70-48-185-92.ngrok-free.app",
+]
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
