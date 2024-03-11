@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
@@ -178,6 +179,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 AUTH_USER_MODEL = "accounts.User"
+
+# django-extensions
+
+GRAPH_MODELS = {
+    "app_labels": [
+        "accounts",
+        "maincore",
+    ],
+    "rankdir": "BT",
+    "output": "models.png",
+}
+
 
 # django-allauth
 

@@ -10,13 +10,16 @@ deploy:
 	git push heroku main
 
 # Generate an image of the models in the system.
+# graph:
+# 	py manage.py graph_models -a -g -o my_project_visualized.png
+
 graph:
-	py manage.py graph_models -a -g -o my_project_visualized.png
+	py manage.py graph_models
 
 coverage:
 	pytest --cov=journal/accounts/tests/ --migrations -n 2 --dist loadfile
 
-# fcov == "fast coverage" by skipping migrations checkingg. Save that for CI.
+# fcov == "fast coverage" by skipping migrations checking. Save that for CI.
 fcov:
 	@echo "Running fast coverage check"
 	@pytest --cov=journal/accounts/tests/ -n 4 --dist loadfile -q
