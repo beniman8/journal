@@ -53,8 +53,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # my apps
     "journal.accounts",
     "journal.maincore",
+    "journal.entries",
     # all auth
     "allauth",
     "allauth.account",
@@ -186,6 +188,7 @@ GRAPH_MODELS = {
     "app_labels": [
         "accounts",
         "maincore",
+        "entries",
     ],
     "rankdir": "BT",
     "output": "models.png",
